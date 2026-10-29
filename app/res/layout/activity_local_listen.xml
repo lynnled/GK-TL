@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg">
+
+    <include
+        android:id="@+id/local_topbar"
+        layout="@layout/local_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbar_height" />
+
+    <ListView
+        android:id="@+id/local_question_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/local_player_bar"
+        android:layout_below="@id/local_topbar"
+        android:cacheColorHint="@android:color/transparent"
+        android:defaultFocusHighlightEnabled="false"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:elevation="0dp"
+        android:footerDividersEnabled="false"
+        android:foreground="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:stateListAnimator="@null" />
+
+    <RelativeLayout
+        android:id="@+id/local_player_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/player_bar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottom_bar_bg">
+
+        <RelativeLayout
+            android:id="@+id/local_seekbar_row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/seekbar_row_height">
+
+            <TextView
+                android:id="@+id/local_time_start"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/local_speed"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="1.0倍"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/local_time_end"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_5"
+                android:layout_toLeftOf="@id/local_speed"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/text_small" />
+
+            <SeekBar
+                android:id="@+id/local_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_5"
+                android:layout_toLeftOf="@id/local_time_end"
+                android:layout_toRightOf="@id/local_time_start"
+                android:maxHeight="3dp"
+                android:minHeight="3dp"
+                android:progressDrawable="@drawable/seekbar_progress"
+                android:splitTrack="false"
+                android:thumb="@drawable/ic_seekbar_thumb" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/local_seekbar_row">
+
+            <ImageButton
+                android:id="@+id/local_play"
+                android:layout_width="@dimen/play_button_size"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:scaleType="center"
+                android:src="@drawable/ic_play" />
+
+            <ImageButton
+                android:id="@+id/local_minus5"
+                android:layout_width="@dimen/side_button_size"
+                android:layout_height="@dimen/side_button_size"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/local_play"
+                android:background="@drawable/btn_press_bg"
+                android:scaleType="center"
+                android:src="@drawable/ic_minus5" />
+
+            <ImageButton
+                android:id="@+id/local_plus5"
+                android:layout_width="@dimen/side_button_size"
+                android:layout_height="@dimen/side_button_size"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/local_play"
+                android:background="@drawable/btn_press_bg"
+                android:scaleType="center"
+                android:src="@drawable/ic_plus5" />
+
+            <ImageButton
+                android:id="@+id/local_all_text"
+                android:layout_width="@dimen/side_button_size"
+                android:layout_height="@dimen/side_button_size"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_press_bg"
+                android:scaleType="center"
+                android:src="@drawable/ic_yuanwen" />
+
+            <TextView
+                android:id="@+id/local_minus5_label"
+                android:layout_width="@dimen/side_button_size"
+                android:layout_height="@dimen/side_button_size"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/local_play"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="5dp"
+                android:text="-5s"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/local_plus5_label"
+                android:layout_width="@dimen/side_button_size"
+                android:layout_height="@dimen/side_button_size"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/local_play"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="5dp"
+                android:text="+5s"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/text_small" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

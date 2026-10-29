@@ -1,0 +1,20 @@
+# build outputs
+build/
+out/
+dist/
+packages/
+json/
+
+# generated / local data
+app/assets/
+*.apk
+*.tklib
+
+# signing material
+keystore/
+*.jks
+*.keystore
+
+# IDE
+.idea/
+*.iml

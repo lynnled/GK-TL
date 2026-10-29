@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="page_bg">#f6f7f7</color>
+    <color name="bottom_bar_bg">#f5f5f5</color>
+    <color name="white">#ffffff</color>
+    <color name="text_black">#333333</color>
+    <color name="text_common">#4a4a4a</color>
+    <color name="text_grey">#999999</color>
+    <color name="text_blue">#4884bb</color>
+    <color name="result_blue">#4093c6</color>
+    <color name="line_grey">#ecedee</color>
+    <color name="content_text">#5a626d</color>
+    <color name="seekbar_bg">#edecea</color>
+    <color name="seekbar_progress">#808080</color>
+    <color name="primary_blue">#0056d6</color>
+    <color name="topbar_btn_text">#0056d6</color>
+    <color name="topbar_btn_bg">#e8f0ff</color>
+    <color name="topbar_btn_press">#d0e0ff</color>
+    <color name="item_press">#d8dadc</color>
+    <color name="wrong_red">#c82d2d</color>
+    <color name="delete_red">#e53935</color>
+</resources>
